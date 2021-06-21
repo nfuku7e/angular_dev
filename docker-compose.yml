@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+    angular_dev_v11:
+        build: .
+        image: angular_dev_v11
+        container_name: angular_dev
+        volumes:
+            - ./project:/angular-project
+        tty: true
+        working_dir: /angular-project
+        ports:
+            - "4200:4200"
+
+volumes:
+    angular-project:
